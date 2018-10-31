@@ -24,6 +24,7 @@ class OpenGoogleToEnterText(unittest.TestCase):
         elm1.click()
         elm1.send_keys("integra micro systems")
         
+        
 
 if __name__ == "__main__":
     #Am using unittest.main to run the test, usually used to run from command line
@@ -38,15 +39,16 @@ if __name__ == "__main__":
     
     outfile = file('google.xml','w')
     #outfile = open('google.html','w')
-    '''runner = HTMLTestRunner(stream=outfile,
+    runner = HTMLTestRunner(stream=outfile,
                             verbosity=2,
                             title="Google page test",
                             description="Google seach text entry page")
-    runner.run(suite)'''
+    runner.run(suite)
     
+    '''
     runner = XMLTestRunner(output = outfile,failfast=False, buffer=False)
     
-    runner.run(suite)
+    runner.run(suite)'''
     
     
     
