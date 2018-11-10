@@ -24,6 +24,9 @@ class OpenGoogleToEnterText(unittest.TestCase):
         elm1.click()
         elm1.send_keys("integra micro systems")
         
+        elm2 = self.driver.find_element_by_name("btnK")
+        elm2.click()
+        
         
 
 if __name__ == "__main__":
