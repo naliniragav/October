@@ -38,7 +38,10 @@ if __name__ == "__main__":
     #unittest.TextTestRunner(verbosity=2).run(suite)
     
     outfile = file('google.xml','w')
-    #outfile = open('google.html','w')
+    
+    '''
+    #Below code to generate html report
+    outfile = open('google.html','w')
     runner = HTMLTestRunner(stream=outfile,
                             verbosity=2,
                             title="Google page test",
@@ -48,7 +51,7 @@ if __name__ == "__main__":
     '''
     runner = XMLTestRunner(output = outfile,failfast=False, buffer=False)
     
-    runner.run(suite)'''
+    runner.run(suite)
     
     
     
