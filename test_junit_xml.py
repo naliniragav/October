@@ -16,15 +16,16 @@ class OpenGoogle(unittest.TestCase):
         
     def test_googleSearch(self):
         #Am acessing the local varible elm1 into another test method by declaring it as global
-        global elm1
-        elm1 = self.driver.find_element_by_xpath("//input[@name='q']")  
+        global elm1, elm2
+        elm1 = self.driver.find_element_by_xpath("//input[@name='q']") 
+        elm2 = self.driver.find_element_by_name("btnK") 
 
 class OpenGoogleToEnterText(unittest.TestCase):    
     def test_googleSearch2(self):     
         elm1.click()
         elm1.send_keys("integra micro systems")
         
-        elm2 = self.driver.find_element_by_name("btnK")
+        
         elm2.click()
         
         
@@ -55,10 +56,3 @@ if __name__ == "__main__":
     runner = XMLTestRunner(output = outfile,failfast=False, buffer=False)
     
     runner.run(suite)
-    
-    
-    
-    
-    
-
-
